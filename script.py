@@ -1,8 +1,12 @@
 import requests
 import pandas as pd
 import time
+import os
+from dotenv import load_dotenv
 
-API_KEY = 'AIzaSyBndgMBwKEElx1DG2_dPA9a8hWeC71qgyo'
+load_dotenv()
+
+API_KEY = os.getenv('GOOGLE_API_KEY')
 TEXT_SEARCH_URL = 'https://places.googleapis.com/v1/places:searchText'
 PLACE_DETAILS_URL_BASE = 'https://places.googleapis.com/v1/places'
 
